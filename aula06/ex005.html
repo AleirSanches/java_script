@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style> 
+    body{
+        background-color: rgb(43, 131, 101);
+        color: rgb(197, 213, 223);
+        font: normal 18pt Arial
+    }
+    </style>
+</head>
+<body>
+    <h2>iniciando o primeiros passos com DOM</h2>
+    <p> Testando o live in Server </p>
+    <p> estou tendo um estudo <strong>forte</strong> de JavaScript</p>
+    <div id='msn'> Estou aprendendo no curso em video</div>
+    <script>
+        var corpo= window.document.body // usando arvore DOM atribuindi a variavel 'corpo' a dodo o BOdy
+        var p1=window.document.getElementsByTagName('p')[0] //atribuindo a variavel P1 a o primeiro paragrafo
+        window.document.write('O paragrafo de p1 e :'+ p1.innerText) // escrevendo em p1
+        p1.style.color= 'red' //mundando cor de p1
+        corpo.style.background = 'blue' // mundando a cordo do fundo do corpo.
+
+        /*var d= window.document.getElementById('msn')
+        d.style.color='green'
+        d.style.background='black'
+        d.innerText=' Estou apresentando DOM'*/ // maneira de acesar DIV usando com DOM com ID
+
+
+
+    </script>
+    
+</body>
+</html>

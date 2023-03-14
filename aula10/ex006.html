@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+
+            color:blue;
+            background:red;
+            font: normal 15pt Arial;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="area"> Aprendendo</div>
+    <!--<div id='area' onclick="clicar ()" onmouseenter=" entrar()" onmouseleave=" sair()"
+     onmousemove=" mover()">Interaja</div> // aqui e uma madeira de acessar a ação dentro da Div-->
+    <script>
+        var area= window.document.getElementById('area')
+        area.addEventListener('click',clicar) //fazer ação dentro do script, não usa o on, ex onclick
+        area.addEventListener('mouseenter',entrar)
+        area.addEventListener('mouseout',sair)
+        area.addEventListener('mousemove',mover)
+
+        function clicar()
+        {
+        
+        area.innerText='Mudei'
+        area.style.background='black'
+        area.style.color='white'
+
+    }
+    function entrar(){
+        
+        area.innerText='Movendo'
+        area.style.background='green'
+        area.style.color='white'
+    }
+    function sair(){
+        
+        area.innerText='Interaja'
+        area.style.background='red'
+        area.style.color='blue'
+    }
+
+    function mover(){
+        
+        area.innerText='Movendoo'
+        area.style.background='brown'
+        area.style.color='black'
+    }
+
+    </script>
+    
+    
+</body>
+</html>
